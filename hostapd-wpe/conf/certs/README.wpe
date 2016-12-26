@@ -1,0 +1,8 @@
+# Certificate creation for Hostapd-WPE #
+########################################
+
+Usage:
+
+make clean
+./bootstrap
+make install

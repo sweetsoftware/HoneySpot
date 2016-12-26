@@ -1,0 +1,23 @@
+version: '2'
+services:
+    ap:
+      network_mode: host
+      privileged: true
+      build: hostapd-wpe
+      volumes:
+        - ./hostapd-wpe/conf:/etc/hostapd-wpe
+      command: /etc/hostapd-wpe/open_wifi.conf
+
+    dnsmasq:
+      build: dnsmasq
+      network_mode: host
+      privileged: true
+      volumes:
+        - ./dnsmasq/dnsmasq.conf:/etc/dnsmasq.conf
+
+    quickfish:
+      build: quickfish
+      volumes:
+        - ./quickfish/src:/app
+      ports:
+        - "80:80"
