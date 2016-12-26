@@ -23,6 +23,7 @@
 ## Allow internet access
 
 iptables --table nat --append POSTROUTING -s 10.0.0.0/24 -j MASQUERADE
+
 iptables --append FORWARD --in-interface eth0 -j ACCEPT
 
 
